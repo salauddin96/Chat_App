@@ -4,13 +4,16 @@ plugins {
 }
 
 android {
+    buildFeatures{
+        viewBinding = true
+    }
     namespace = "org.techtales.pakhi"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "org.techtales.pakhi"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -44,4 +47,22 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    //OTPAddCompose
+    implementation ("com.github.mukeshsolanki.android-otpview-pinview:otpview-compose:3.1.0")
+
+    //OTPView
+    implementation ("com.github.mukeshsolanki.android-otpview-pinview:otpview:3.1.0")
+
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    //PGrezeFacebookReactionPattern
+    implementation ("com.github.pgreze:android-reactions:1.5.1")
+
+    //CircularStatusView
+    implementation ("com.github.3llomi:CircularStatusView:V1.0.3")
+
+    //StoryView
+    implementation ("com.github.OMARIHAMZA:StoryView:1.0.2-alpha")
 }
