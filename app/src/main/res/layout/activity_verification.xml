@@ -72,7 +72,7 @@
 
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/phnText"
                 android:layout_margin="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/continueBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -99,10 +99,10 @@
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:layout_margin="15dp"
-                app:layout_constraintEnd_toEndOf="@+id/editText"
+                app:layout_constraintEnd_toEndOf="@+id/phnText"
                 app:layout_constraintHorizontal_bias="0.497"
-                app:layout_constraintStart_toStartOf="@+id/editText"
-                app:layout_constraintTop_toBottomOf="@+id/editText"
+                app:layout_constraintStart_toStartOf="@+id/phnText"
+                app:layout_constraintTop_toBottomOf="@+id/phnText"
                 app:strokeColor="#3F51B5"
                 app:strokeWidth="1dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
