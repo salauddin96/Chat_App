@@ -36,11 +36,11 @@ class SetupProfileActivity : AppCompatActivity() {
         storage = FirebaseStorage.getInstance()
         auth = FirebaseAuth.getInstance()
 
-        binding.profileImage.setOnClickListener {
+        binding.profileImageBig.setOnClickListener {
 
             val intent = Intent()
             intent.action = Intent.ACTION_GET_CONTENT
-            intent.type = "image"
+            intent.type = "image/*"
             startActivityForResult(intent, 45)
         }
 
@@ -61,17 +61,17 @@ class SetupProfileActivity : AppCompatActivity() {
                         val imageUrl = it.toString()
                         val uid = auth!!.uid
                         val phone = auth!!.currentUser!!.phoneNumber
-                        val name: String = binding.nameETxt.toString()
+                        val name: String = binding.nameETxt.text.toString()
                         val user = User(uid!!, name, phone!!, imageUrl)
 
                         database!!.reference
                             .child("users")
-                            .child(uid)
+                            .child(uid!!)
                             .setValue(user)
                             .addOnCompleteListener {
 
                                 dialog!!.dismiss()
-                                val intent = Intent(this, MainActivity::class.java)
+                                val intent = Intent(this@SetupProfileActivity, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()
                             }
@@ -79,17 +79,17 @@ class SetupProfileActivity : AppCompatActivity() {
 
                         val uid = auth!!.uid
                         val phone = auth!!.currentUser!!.phoneNumber
-                        val name: String = binding.nameETxt.toString()
+                        val name: String = binding.nameETxt.text.toString()
                         val user = User(uid!!, name, phone!!, "No Image")
 
                         database!!.reference
                             .child("users")
-                            .child(uid)
+                            .child(uid!!)
                             .setValue(user)
                             .addOnCompleteListener {
 
                                 dialog!!.dismiss()
-                                val intent = Intent(this, MainActivity::class.java)
+                                val intent = Intent(this@SetupProfileActivity, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()
                             }
@@ -101,6 +101,7 @@ class SetupProfileActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 

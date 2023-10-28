@@ -9,11 +9,12 @@
 
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/profileImageBig"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="68dp"
-        android:src="@drawable/user"
+        android:src="@drawable/baseline_person_24"
+        app:civ_border_width="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,9 +27,10 @@
         android:src="@drawable/camera"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/profileImageBig"
+        app:layout_constraintVertical_bias="0.775" />
 
     <TextView
         android:id="@+id/textView4"
@@ -38,9 +40,10 @@
         android:fontFamily="@font/aladin"
         android:text="Profile Information"
         android:textSize="25sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/profileImageBig" />
 
     <TextView
         android:id="@+id/textView5"
@@ -73,7 +76,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="15dp">
 
 
             <EditText

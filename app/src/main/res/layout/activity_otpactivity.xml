@@ -14,20 +14,19 @@
         android:layout_marginTop="72dp"
         android:src="@drawable/otpverification"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/phoneTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/amarante"
-        android:text="Verify Number"
+        android:text="Verify +8801300000000"
         android:textColor="#4CAF50"
         android:textSize="24sp"
-        android:textStyle="bold"
+        android:textStyle="bold|normal"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="@+id/imageView"
@@ -41,9 +40,9 @@
         android:layout_marginTop="20dp"
         android:text="Enter your OTP code to verify your Phone Number"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="@id/textView"
-        app:layout_constraintStart_toStartOf="@id/textView"
-        app:layout_constraintTop_toBottomOf="@id/textView" />
+        app:layout_constraintEnd_toEndOf="@id/phoneTxt"
+        app:layout_constraintStart_toStartOf="@id/phoneTxt"
+        app:layout_constraintTop_toBottomOf="@id/phoneTxt" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -51,11 +50,16 @@
         android:layout_marginTop="30dp"
         android:elevation="15dp"
         android:layout_margin="30dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="15dp">
 
 
             <com.mukeshsolanki.OtpView
@@ -80,7 +84,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/verifyBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"

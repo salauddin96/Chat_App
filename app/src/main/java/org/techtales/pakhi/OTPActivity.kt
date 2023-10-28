@@ -37,7 +37,7 @@ class OTPActivity : AppCompatActivity() {
 
         val phoneNumber = intent.getStringExtra("phoneNumber")
 
-        binding.textView.text = "Verify $phoneNumber"
+        binding.phoneTxt.text = "Verify $phoneNumber"
 
         val option = PhoneAuthOptions.newBuilder(auth!!)
             .setPhoneNumber(phoneNumber!!)

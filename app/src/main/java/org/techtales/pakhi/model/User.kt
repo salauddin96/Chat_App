@@ -20,7 +20,7 @@ class User {
         this.uid = uid
         this.name = name
         this.phoneNumber = phoneNumber
-        this.profileImage = profileImage
+        this.profileImage = uid
     }
 
 }
