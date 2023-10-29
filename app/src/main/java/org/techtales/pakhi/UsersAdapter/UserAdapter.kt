@@ -29,7 +29,7 @@ class UserAdapter (var context: Context, var userList: ArrayList<User>): Recycle
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
        val user = userList[position]
         holder.binding.profileName.text = user.name
-        Glide.with(context).load(user.profileImage).placeholder(R.drawable.user)
+        Glide.with(context).load(user.profileImage).placeholder(R.drawable.baseline_person_24)
             .into(holder.binding.profileImg)
     }
 }
