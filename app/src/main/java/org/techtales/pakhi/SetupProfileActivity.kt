@@ -135,7 +135,7 @@ class SetupProfileActivity : AppCompatActivity() {
                     }
                 }
 
-                binding.profileImage.setImageURI(data.data)
+                binding.profileImageBig.setImageURI(data.data)
                 selectedImage = data.data
             }
         }

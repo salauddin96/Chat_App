@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="13dp"
@@ -21,7 +21,7 @@
             android:layout_height="50dp"
             android:src="@drawable/baseline_person_24"
             app:civ_border_width="2dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,23 +30,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_marginTop="16dp"
             android:text="Profile Name"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/profileImg"
-            app:layout_constraintStart_toStartOf="@+id/profileImg"
-            app:layout_constraintTop_toBottomOf="@+id/profileImg" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toEndOf="@+id/profileImg"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/profilePro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:layout_marginBottom="16dp"
             android:text="Android Developer"
             android:textColor="@color/black"
             android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/profileName"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/profileName"
             app:layout_constraintTop_toBottomOf="@+id/profileName" />
 
